@@ -28,6 +28,7 @@ function Login(props) {
     e.preventDefault();
     try {
       const res = await userLogin(username, password);
+      console.log(res);
       if (res.statusCode === 200) {
         notify("tr", "success", "Logged in Successfully");
         const data = {
