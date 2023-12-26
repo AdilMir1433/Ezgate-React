@@ -19,18 +19,21 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeContextWrapper>
     <CommunityContext>
-          <BackgroundColorWrapper>
-            <BrowserRouter>
-              <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/admin/*" element={<AdminLayout />} />
-                <Route path="/rtl/*" element={<RTLLayout />} />
-                <Route path="/back-office/*" element={<BackOfficeLayout BackOfficeLayout={true}/>} />
-                <Route path="/register" element={<Register />} />
-                <Route path="*" element={<Navigate to="/login" replace />} />
-              </Routes>
-            </BrowserRouter>
-          </BackgroundColorWrapper>
+      <BackgroundColorWrapper>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin/*" element={<AdminLayout />} />
+            <Route path="/rtl/*" element={<RTLLayout />} />
+            <Route
+              path="/back-office/*"
+              element={<BackOfficeLayout BackOfficeLayout={true} />}
+            />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={<Navigate to="/login" replace />} />
+          </Routes>
+        </BrowserRouter>
+      </BackgroundColorWrapper>
     </CommunityContext>
   </ThemeContextWrapper>
 );

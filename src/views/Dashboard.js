@@ -41,7 +41,7 @@ function Dashboard(props) {
   useEffect(() => {
     const token = getLocalStorage("token");
     if (token == null) {
-      navigate("/");
+      navigate("/login");
     }
   }, [navigate]);
 
